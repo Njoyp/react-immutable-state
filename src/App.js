@@ -13,6 +13,9 @@ function App() {
 
   const deleteWorkout = (workout) => {
     console.log("deleteWorkout:", workout);
+    setWorkouts(
+      workouts.filter((anything) => anything.exercise !== workout.exercise)
+    );
   };
 
   const completeWorkout = (workout) => {
